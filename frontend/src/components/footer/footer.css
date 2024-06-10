@@ -1,0 +1,23 @@
+.foot {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.clrr {
+    color: aqua !important;
+    font-size: 25px !important;
+}
+
+.container {
+    padding: 0 15px; /* Adjust the padding to remove extra space */
+}
+
+.follow-us {
+    margin: 0 -15px; /* Negative margin to counter container padding */
+}
+
+@media (min-width: 501px) and (max-width: 770px) {
+    .foot {
+        height: auto !important; /* Adjust the height to auto for better fit */
+    }
+}

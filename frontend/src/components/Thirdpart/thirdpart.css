@@ -1,0 +1,24 @@
+.thirdpart h3{
+    color: #922b93;
+   }
+   
+   
+   .thirdimg {
+       display: block;
+       max-width: 100%;
+       height: auto;
+   }
+   .thirdimg img{
+    width: 100%;
+   }
+
+
+   @media (max-width:500px) {
+    .thirdimg img{
+        height: 169px;
+        width: 100%;
+    }
+      
+
+   }
+   

@@ -1,0 +1,129 @@
+.fourtheast {
+    color: #922b93;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.btnbook{
+    background-color: orangered !important;
+    color :black !important;
+}
+
+.image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s;
+    border-radius: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #922b93;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: opacity 0.5s, transform 0.5s;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.image-container:hover .image {
+    transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.heading {
+    font-size: 18px;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.3s;
+}
+
+.content {
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for tablets and mobile devices */
+@media (max-width: 768px) {
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container .overlay {
+        position: static;
+        opacity: 1;
+        transform: translateY(0);
+        background-color: #922b93;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .image-container:hover .image {
+        transform: none;
+    }
+
+    .image-container:hover .overlay {
+        opacity: 1;
+        transform: none;
+    }
+
+    .heading {
+        font-size: 16px;
+        animation: none;
+    }
+
+    .content {
+        font-size: 14px;
+        opacity: 1;
+        animation: none;
+    }
+}

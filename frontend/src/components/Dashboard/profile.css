@@ -1,0 +1,61 @@
+.profile{
+    height: 85vh;
+}
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    height: 75vh;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.profile-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-item:last-child {
+    border-bottom: none;
+}
+
+.profile-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.profile-value {
+    margin-left: 10px;
+    color: #666;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-item p {
+    margin: 5px 0;
+}
+
+.profile-item span {
+    display: inline-block;
+    width: 150px;
+}
+@media (max-width:500px) {
+    .userbooking{
+        height:90vh !important;
+        /* background-color: black; */
+    }
+}

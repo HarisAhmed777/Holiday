@@ -1,0 +1,72 @@
+.card{
+    background-color: inherit !important;
+    z-index: 0;
+}
+.packagebtn{
+    height: 40px !important;
+    width: 150px !important;
+}
+.packageimg{
+    height: 211px;
+    width: 400px;
+}
+.packmainimg{
+    height: 500px;
+}
+.packagecontainer{
+    width: 430px;
+    height: 409px;
+    /* margin-right: 10px; */
+
+}
+.packh5{
+    color:purple;
+    font-size: 30px;
+}
+.packpack{
+    background-color: purple;
+    color: white;
+}
+.packpack h5{
+    font-size: 30px;
+}
+.packbtn{
+    background-color: orangered;
+}
+ @media (min-width:501px)and (max-width :770px) {
+
+    .packagecontainer{
+        text-align: center;
+        width: 300px;
+    }
+    .packpack{
+        margin-left: 5% ;
+        padding: 0;
+        width: 300px;
+        text-align: center;
+    }
+    .packageimg{
+        height: 250px;
+        width: 300px !important;
+    }
+ }
+@media (max-width:500px) {
+    .packagecontainer{
+        text-align: center;
+        width: 100%;
+    }
+    .packpack{
+        width: 90%;
+        margin-left: 5%;
+        text-align: center;
+    }
+    .packmainimg{
+        height: 250px;
+        /* width: 90%; */
+    }
+    .packageimg{
+        height: 169px;
+        width: 90%;
+    }
+    
+}

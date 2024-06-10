@@ -1,0 +1,59 @@
+.coroit{
+    /* margin-top: 60px; */
+}
+
+
+.train {
+    animation: moveTrain 15s linear infinite;
+    background-color:slateblue;
+    color: white;
+    height: 25px;
+    border-radius: 20px;
+}
+.clr{
+    color:purple;
+}
+.btnhome{
+    background-color: purple;
+    height: 30px;
+    width: 90px;
+    padding: 3px;
+    color: whitesmoke;
+}
+.btn:hover {
+    background-color:purple;
+    color: whitesmoke;  
+}
+.homemainimg{
+    height: 501px;
+}
+
+@keyframes moveTrain {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+@media (max-width: 770px) {
+    .train {
+        animation: none;
+    }
+    .homemainimg{
+        height: 250px;
+    }
+}
+
+
+
+@media (max-width:500px) {
+    .homemainimg{
+        height: 169px;
+    }
+}
+
+
+
