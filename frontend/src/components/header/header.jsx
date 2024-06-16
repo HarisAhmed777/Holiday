@@ -5,7 +5,7 @@ import { faPhone, faComment, faEnvelope, faRightToBracket } from '@fortawesome/f
 import classNames from 'classnames';
 import { Context } from '../../content';
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../../images/logo.jpg';
+import Logo from '../../images/Logo.png';
 
 function Header() {
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ function Header() {
     setIsAuthorized(false);
     setUser({});
     localStorage.removeItem('jwtToken');
-    navigate('/');
+    navigate('/home');
   };
 
   const handleItemClick = (item) => {
@@ -74,7 +74,7 @@ function Header() {
               <span onClick={handleLogout}>Logout</span>
             ) : (
               <Link to="/login">
-                <span>Login/Sign up</span>
+                <span className='span'>Login/Sign up</span>
               </Link>
             )}
           </section>
@@ -83,7 +83,7 @@ function Header() {
       <div className={styles.bottomBar}>
         <div className={styles.bottomBarContent}>
           <a href="#" className={styles.logo}>
-            <img className={styles.logoImg} src={logo} alt="logo" />
+          <Link to="/home"> <img className={styles.logoImg} src={Logo} alt="logo" /></Link>
           </a>
           <nav className={styles.nav}>
             <ul className={styles.navList}>
@@ -98,7 +98,7 @@ function Header() {
                 </>
               )}
               <li className={classNames(styles.navItem, { [styles.active]: activeItem === 'home' })} onClick={() => handleItemClick('home')}>
-                <Link to="/">Home</Link>
+                <Link to="/home">Home</Link>
               </li>
               <li className={classNames(styles.navItem, { [styles.active]: activeItem === 'packages' })} onClick={() => handleItemClick('packages')}>
                 <Link to="/package">Packages</Link>

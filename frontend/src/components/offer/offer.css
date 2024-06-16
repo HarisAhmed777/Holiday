@@ -10,7 +10,7 @@
 }
 
 .offsubimg{
-    height: 366px;
+    height: 211px;
     width: 404px;
 }
 .h51 ,.h52,.h53 ,.h54,.h55 ,.h56{
@@ -58,7 +58,7 @@
 
 .h54{
     position: absolute;
-    bottom: -95%;
+    bottom: -75%;
     left:20%;
     right: 0;
     margin: 0;
@@ -70,7 +70,7 @@
 }
 .h55{
     position: absolute;
-    bottom: -95%;
+    bottom: -75%;
     left:49%;
     right: 0;
     margin: 0;
@@ -83,7 +83,7 @@
 }
 .h56{
     position: absolute;
-    bottom: -95%;
+    bottom: -75%;
     left:77%;
     right: 0;
     margin: 0;

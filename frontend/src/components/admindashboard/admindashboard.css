@@ -35,7 +35,9 @@
     color: #fff;
 }
 
-
+.clr{
+    color: purple !important;
+}
 .package-req-container {
     margin-top: 20px;
     padding: 20px;

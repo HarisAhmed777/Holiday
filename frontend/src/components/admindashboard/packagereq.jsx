@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import './admindashboard.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { baseUrl } from "../../url";
 
 function Packagereq() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8888/packagaereq')
+        fetch(`${baseUrl}/packagaereq`)
             .then(res => res.json())
             .then(view => {
                 console.log(view);
@@ -18,10 +19,10 @@ function Packagereq() {
     }, []);
 
     return (
-        <>
-            <div className='package-req-container container hei'>
-                <h1 className="text-center package-req-header">The Package Requests are:</h1>
-                <table className="table table-responsive table-bordered">
+        <div className='container mt-4'>
+            <h1 className="text-center mb-4 clr">The Package Requests are:</h1>
+            <div className="table-responsive">
+                <table className="table table-striped table-bordered">
                     <thead className="thead-dark">
                         <tr>
                             <th>First Name</th>
@@ -48,7 +49,7 @@ function Packagereq() {
                     </tbody>
                 </table>
             </div>
-        </>
+        </div>
     );
 }
 

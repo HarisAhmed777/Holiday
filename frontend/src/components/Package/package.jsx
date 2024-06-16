@@ -30,7 +30,7 @@ function Package() {
                 <img src={concert} alt="" className="packmainimg" />
             </div>
             <div className="mt-4">
-                <h5 className="text-center packh5 mb-3">PACKAGES</h5>
+                <h5 className="text-center packh5 mb-3 clr">PACKAGES</h5>
             </div>
             <div className="container">
                 <div className="row">

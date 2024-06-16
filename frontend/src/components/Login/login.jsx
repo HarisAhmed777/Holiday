@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import { Context } from "../../content";
 import './login.css';
+import { baseUrl } from "../../url";
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -15,7 +16,7 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8888/login', { email, password }, { headers: { 'Content-Type': 'application/json' } })
+        axios.post(`${baseUrl}/login`, { email, password }, { headers: { 'Content-Type': 'application/json' } })
             .then(res => {
                 console.log(res.data);
                 if (res.data.status === "Success") {
@@ -24,7 +25,7 @@ function Login() {
                         setUser(res.data.name);
                         console.log(res.data.name);
                         localStorage.setItem('jwtToken', res.data.token);
-                        navigate('/');
+                        navigate('/home');
                     } else if (res.data.role === "admin") {
                         navigate('/admin');
                     }
@@ -46,9 +47,8 @@ function Login() {
             <form onSubmit={handleSubmit}>
                 <input className='form-control-both' onChange={(e) => setEmail(e.target.value)} placeholder='Email' type='email' />
                 <input className='form-control-both' onChange={(e) => setPassword(e.target.value)} placeholder='Password' type='password' />
-            {error && <p className="error-messagelogin text-danger">Username or password is incorrect</p>} {/* Conditionally render the error message */}
-
-                <button className='btnbook btn-login'>LOGIN</button>
+                {error && <p className="error-messagelogin text-danger">{error}</p>} {/* Conditionally render the error message */}
+                <button className='btn-login'>LOGIN</button>
             </form>
         </div>
     );

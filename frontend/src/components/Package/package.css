@@ -12,6 +12,9 @@
 }
 .packmainimg{
     height: 500px;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 .packagecontainer{
     width: 430px;
@@ -20,18 +23,32 @@
 
 }
 .packh5{
-    color:purple;
+    color:white;
+    
     font-size: 30px;
 }
 .packpack{
-    background-color: purple;
-    color: white;
+    width: 97%;
+    margin-left: 1%;
+    background-color: skyblue;
+    /* color: white; */
 }
 .packpack h5{
     font-size: 30px;
 }
 .packbtn{
     background-color: orangered;
+}
+
+@media (min-width: 800px) and (max-width:1025px) {
+ .packageimg{
+    width: 295px;
+ }
+ .packpack{
+    width: 297px;
+    margin-left: -0.3%;
+ }
+    
 }
  @media (min-width:501px)and (max-width :770px) {
 
@@ -40,9 +57,9 @@
         width: 300px;
     }
     .packpack{
-        margin-left: 5% ;
         padding: 0;
-        width: 300px;
+        width: 90%;
+        margin-left: 5%;
         text-align: center;
     }
     .packageimg{

@@ -15,14 +15,15 @@
 }
 .btnhome{
     background-color: purple;
-    height: 30px;
-    width: 90px;
-    padding: 3px;
-    color: whitesmoke;
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 40px;
+    color: whitesmoke !important;
 }
 .btn:hover {
     background-color:purple;
-    color: whitesmoke;  
+    color: whitesmoke !important;  
 }
 .homemainimg{
     height: 501px;

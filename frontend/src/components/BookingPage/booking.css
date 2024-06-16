@@ -1,37 +1,59 @@
+/* Container */
 .booking-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    border: 1px solid #ddd;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.background-image-booking {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content-container-booking {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-    /* margin-top: 200px;  */
 }
 
-.booking-container h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
+/* Form Control */
 .form-control-booking,
-.select-control-booking {
+.select-control-booking, .form-control-booking {
     width: 100%;
     padding: 10px;
     border: none;
     border-bottom: 2px solid #ccc;
     background: none;
     outline: none;
+    height: 100%;
     transition: border-bottom-color 0.3s ease;
     margin-bottom: 10px;
+    color: white; 
+}
+.form-control-booking:focus,
+.select-control-booking:focus,
+.phone-input-container .form-control-booking:focus {
+    border-bottom-color: #ffcc00;
 }
 
-.form-control-booking:focus,
-.select-control-booking:focus {
-    border-bottom-color: #ffcc00;  
+.clcc{
+    background-color: aqua;
 }
 
 /* Button styling */
@@ -39,7 +61,7 @@
     width: 100%;
     padding: 10px;
     margin-top: 20px;
-    background-color: #ffcc00;  
+    background-color: #ffcc00;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -49,6 +71,36 @@
 }
 
 .btn-booking:hover {
-    background-color: #e6b800;  
+    background-color: #e6b800;
 }
+
+/* Phone input container */
+.phone-input-container {
+    width: 100%;
+    margin-bottom: 10px;
+    /* background-color: inherit; */
+    color:black;
     
+}
+
+.phone-input-container ::placeholder{
+ color: black;
+}
+
+
+.phone-input-container .form-control-booking {
+    width: calc(100% - 56px); /* Adjust for the width of the country code selector */
+    display: inline-block;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-container-booking {
+        padding: 20px;
+    }
+
+    .btn-booking {
+        font-size: 14px;
+    }
+}

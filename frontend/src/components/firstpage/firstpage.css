@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.homefirst {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../images/Logo.png'); /* Use your image here */
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* No repeat for the background image */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.fcontent h1{
+        font-size: 4vw;
+        font-weight: 500;
+        background: linear-gradient(to right, #e414e1, #e715e7); /* Gradient color */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
+
+
+.flogo {
+    height: 50px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    margin-right: 20px;
+    font-size: 20px;
+    margin-top: 0px !important;
+    padding: 0;
+    margin: 0;
+}
+
+.fcontent {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.fcontent h1 {
+    font-size: 4vw;
+    font-weight: 500;
+}
+
+.nav-item a {
+    color: limegreen;
+    margin-left: 30px;
+}
+
+.fcontent button {
+    text-decoration: none;
+    display: inline-block;
+    color:lightpink;
+    background-color: purple;
+    font-size: 1.5vw;
+    border: 2px solid #fff;
+    padding: 10px 40px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+@media (max-width: 1200px) {
+    .fcontent h1 {
+        font-size: 3.5vw;
+    }
+    .fcontent button {
+        font-size: 1.8vw;
+        padding: 12px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fcontent h1 {
+        font-size: 6vw;
+    }
+    .fcontent button {
+        font-size: 3vw;
+        padding: 10px 30px;
+    }
+    .homefirst {
+        background-size: contain; /* Adjust background-size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .fcontent h1 {
+        font-size: 8vw;
+    }
+    .fcontent button {
+        font-size: 4vw;
+        padding: 8px 20px;
+        margin-top: 80px;
+    }
+    .homefirst {
+        background-size: contain; /* Adjust background-size for smaller screens */
+    }
+}

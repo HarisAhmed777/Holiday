@@ -1,4 +1,4 @@
-/* RESET */
+
 * {
     margin: 0;
     padding: 0;
@@ -21,13 +21,11 @@
     color: inherit;
   }
   
-  /* BASE STYLES */
   body {
     background-color: #e8f0f7;
     font-family: 'Inter', sans-serif;
   }
   
-  /* NORMAL STYLES */
   .header {
     position: fixed;
     width: 100%;
@@ -35,8 +33,8 @@
   }
   
   .topBar {
-    background-color: rgb(39, 44, 51);
-    color: aqua;
+    background-color:blue;
+    color: lime;
   }
   
   .topBarContent {
@@ -58,7 +56,7 @@
   }
   
   .bottomBar {
-    background-color: rgb(19, 22, 26);
+    background-color:aqua;
   }
   
   .bottomBarContent {
@@ -99,12 +97,12 @@
   }
   
   .navItem {
-    color: rgba(255, 255, 255, 0.75) !important;
+    color: black;
 
   }
   
   .navLink {
-    color: rgba(255, 255, 255, 0.75) !important;
+    color:black;
     transition: all 0.2s;
 
   }
@@ -115,8 +113,8 @@
   }
   
   .btn {
-    color:black;
-    background-color: aqua;
+    color:lime;
+    background-color: purple;
     padding: 8px 20px;
     border-radius: 1000px;
     text-transform: uppercase;
@@ -155,13 +153,9 @@
 .navItem:hover .dropdownMenu {
   display: block;
 }
-
-/* Adjust styles as necessary */
-
-  
-  .hamburger {
-    cursor: pointer;
-    display: none;
+.hamburger {
+  cursor: pointer;
+  display: none;
   }
   .active {
     color: aqua !important;  
@@ -176,7 +170,6 @@
     transition: all 0.3s ease-in-out;
   }
   
-  /* For JS */
   .navOpen {
     left: 50% !important;
   }
@@ -193,7 +186,6 @@
     transform: translateY(-7px) rotate(-45deg);
   }
   
-  /* MEDIA QUERIES */
   @media (max-width: 650px) {
     .nav {
       position: fixed;
@@ -225,12 +217,15 @@
     }
   }
   
-  @media (max-width: 360px) {
-    .topBarContent {
-      font-size: 8px !important;
+  @media (max-width: 399px) {
+    .logoImg {
+      height: 30px;
+    }
+    .topBarContent{
+      font-size: 6px !important;
     }
   }
-  @media (max-width:500px) {
+  @media (min-width :400px ) and (max-width:500px) {
     .logoImg {
       height: 30px;
     }
