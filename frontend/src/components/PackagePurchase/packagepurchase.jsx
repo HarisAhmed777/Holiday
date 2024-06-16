@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../header/header';
 import { useState } from 'react';
 import purpack from '../../images/packenq.png';
 import './packagepurchase.css'; 

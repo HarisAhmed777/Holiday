@@ -27,7 +27,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent overlay */
+  background: rgba(0, 0, 0, 0.5); 
   padding: 20px;
   box-sizing: border-box;
 }

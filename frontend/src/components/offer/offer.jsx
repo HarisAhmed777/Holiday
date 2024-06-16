@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../header/header";
-// import offone from "../../images/offermain.jpg"
 import './offer.css'
 import offone from '../../images/off/offone.jpg';
 import offtwo from '../../images/off/offtwo.jpg';

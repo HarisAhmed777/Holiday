@@ -49,9 +49,9 @@ function Booking() {
   };
 
   const calculatetotalamount = () => {
-    const days = calculateDays();
+    const days =parseInt(calculateDays());
     const totalamountPerDay = adults * 1100 + children * 600;
-    return totalamountPerDay * days;
+    return parseInt(totalamountPerDay * days);
   };
 
   const handleSubmit = async (e) => {
@@ -75,7 +75,7 @@ function Booking() {
         toast.success("Booking confirmed successfully,See Dashboard", { autoClose: 3000 });
         setTimeout(() => {
           navigate('/home');
-        }, 1000);
+        }, 3000);
       } else {
         toast.error("Try again later  ");
       }
@@ -84,7 +84,7 @@ function Booking() {
     }
   };
 
-  const totalamount = calculatetotalamount();
+  const totalamount = parseInt(calculatetotalamount());
 
   return (
     <>
@@ -171,7 +171,7 @@ function Booking() {
             </div>
 
             <div className="text-center">
-              <h5 className="text-white">The total amount will be: {totalamount} Rs</h5>
+              <h5 className="text-white">The total amount will be: {parseInt(totalamount)} Rs</h5>
             </div>
 
             <div className="text-center">

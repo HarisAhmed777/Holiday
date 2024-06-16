@@ -6,10 +6,10 @@ body {
 .homefirst {
     width: 100vw;
     height: 100vh;
-    background-image: url('../../images/Logo.png'); /* Use your image here */
-    background-size: cover; /* Ensures the image covers the entire screen */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* No repeat for the background image */
+    background-image: url('../../images/Logo.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     position: relative;
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@ body {
 .fcontent h1{
         font-size: 4vw;
         font-weight: 500;
-        background: linear-gradient(to right, #e414e1, #e715e7); /* Gradient color */
+        background: linear-gradient(to right, #e414e1, #e715e7); 
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -90,7 +90,7 @@ body {
         padding: 10px 30px;
     }
     .homefirst {
-        background-size: contain; /* Adjust background-size for smaller screens */
+        background-size: contain; 
     }
 }
 
@@ -104,6 +104,6 @@ body {
         margin-top: 80px;
     }
     .homefirst {
-        background-size: contain; /* Adjust background-size for smaller screens */
+        background-size: contain;
     }
 }

@@ -19,7 +19,7 @@
 .packagecontainer{
     width: 430px;
     height: 409px;
-    /* margin-right: 10px; */
+
 
 }
 .packh5{
@@ -31,7 +31,6 @@
     width: 97%;
     margin-left: 1%;
     background-color: skyblue;
-    /* color: white; */
 }
 .packpack h5{
     font-size: 30px;
@@ -79,7 +78,6 @@
     }
     .packmainimg{
         height: 250px;
-        /* width: 90%; */
     }
     .packageimg{
         height: 169px;

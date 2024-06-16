@@ -19,9 +19,7 @@ function Thirdpart(){
         </div>
         <div>
             <p className="text-center">Either way we are sure you’ll go back home in the evening with a carload of lovely memories.</p>
-                {/* <div className="thirdpartparttwo row justify-content-center">
-                    <img src="" className="col-12 col-md-8 thirdimg" />
-                </div> */}
+
         </div>
         </>
     )

@@ -75,6 +75,7 @@ function LoginRedirect() {
     const token = localStorage.getItem('jwtToken');
     if (token) {
       setIsAuthorized(true);
+      setUser(user);
       navigate('/home');
     }
   }, [isAuthorized, setIsAuthorized, navigate]);

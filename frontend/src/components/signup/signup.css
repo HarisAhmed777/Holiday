@@ -61,3 +61,28 @@
     font-family: serif;
     color: #ff4d4d;
 }
+
+@media (max-width: 380px) {
+    .signup-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-control-both, .form-control-sign {
+        padding: 8px;
+        margin: 8px 0;
+        width: 90%;
+    }
+    .phn{
+        width: 95% !important;
+    }
+
+    .btn-login, .btn-signup {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .login-container p, .signup-container h1 {
+        font-size: 20px;
+    }
+}

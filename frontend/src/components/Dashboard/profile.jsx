@@ -18,11 +18,11 @@ function Profile() {
     const { user } = useContext(Context);
 
     useEffect(() => {
-        const token = localStorage.getItem('jwtToken');
-        console.log(token);
-
         fetch(`${baseUrl}/user?email=${user}`, {
-            method: 'GET'
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
         .then(res => {
             if (!res.ok) {
@@ -54,10 +54,11 @@ function Profile() {
     };
 
     const handleUpdate = () => {
-        const token = localStorage.getItem('token');
-
         fetch(`${baseUrl}/user/update`, {
             method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify(formData),
         })
         .then(res => {
@@ -76,6 +77,7 @@ function Profile() {
     };
 
     return (
+        <div className='bbody'>
         <div className='profile-container prop' style={{ backgroundImage: `url(${profile})` }}>
             <h1 className='profile-header text-white'>Your Profile</h1>
             {data ? (
@@ -89,9 +91,6 @@ function Profile() {
                             onChange={handleInputChange}
                             disabled={!editMode}
                         />
-                        <button onClick={handleEditToggle}>
-                            <FontAwesomeIcon icon={faEdit} />
-                        </button>
                     </div>
                     <div className='profile-item'>
                         <label>Last Name:</label>
@@ -102,9 +101,6 @@ function Profile() {
                             onChange={handleInputChange}
                             disabled={!editMode}
                         />
-                        <button onClick={handleEditToggle}>
-                            <FontAwesomeIcon icon={faEdit} />
-                        </button>
                     </div>
                     <div className='profile-item'>
                         <label>Mobile Number:</label>
@@ -115,9 +111,6 @@ function Profile() {
                             onChange={handleInputChange}
                             disabled={!editMode}
                         />
-                        <button onClick={handleEditToggle}>
-                            <FontAwesomeIcon icon={faEdit} />
-                        </button>
                     </div>
                     <div className='profile-item'>
                         <label>Email:</label>
@@ -128,6 +121,9 @@ function Profile() {
                             disabled
                         />
                     </div>
+                    <button onClick={handleEditToggle}>
+                        <FontAwesomeIcon icon={faEdit} /> {editMode ? 'Cancel' : 'Edit'}
+                    </button>
                     <button onClick={handleUpdate} disabled={!editMode}>
                         Update
                     </button>
@@ -135,6 +131,7 @@ function Profile() {
             ) : (
                 <p>Loading...</p>
             )}
+        </div>
         </div>
     );
 }

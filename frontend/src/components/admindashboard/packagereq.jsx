@@ -10,7 +10,6 @@ function Packagereq() {
         fetch(`${baseUrl}/packagaereq`)
             .then(res => res.json())
             .then(view => {
-                console.log(view);
                 setData(view);
             })
             .catch(error => {

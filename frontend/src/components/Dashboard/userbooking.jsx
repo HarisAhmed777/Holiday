@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Context } from "../../content";
-import './profile.css'; // Reuse the same CSS file
+import './userbookings.css'; 
 import { baseUrl } from "../../url";
-import profile from '../../images/profile.jpg'; // Importing the profile image
+import profile from '../../images/profile.jpg'; 
 
 function UserBooking() {
     const [data, setData] = useState([]);
@@ -20,24 +20,26 @@ function UserBooking() {
     }, [user]);
 
     return (
-        <div className='profile-container userbooking' style={{ backgroundImage: `url(${profile})` }}>
-            <h1 className='profile-header text-white'>Your Bookings</h1>
-            {data.length > 0 ? (
-                data.map((booking, index) => (
-                    <div key={index} className='profile-item'>
-                        <p><span className='profile-label'>Name:</span> <span className='profile-value d-inline'>{booking.name}</span></p>
-                        <p><span className='profile-label'>Age:</span> <span className='profile-value d-inline'>{booking.age}</span></p>
-                        <p><span className='profile-label'>City:</span> <span className='profile-value d-inline'>{booking.city}</span></p>
-                        <p><span className='profile-label'>Persons:</span> <span className='profile-value d-inline'>{booking.persons}</span></p>
-                        <p><span className='profile-label'>No. of Adults:</span> <span className='profile-value d-inline'>{booking.adults}</span></p>
-                        <p><span className='profile-label'>Start Date:</span> <span className='profile-value d-inline'>{new Date(booking.startdate).toLocaleDateString()}</span></p>
-                        <p><span className='profile-label'>End Date:</span> <span className='profile-value d-inline'>{new Date(booking.enddate).toLocaleDateString()}</span></p>
-                        <p><span className='profile-label'>Total Amount:</span> <span className='profile-value d-inline'>{booking.totalamount}</span></p>
-                    </div>
-                ))
-            ) : (
-                <p>No bookings found.</p>
-            )}
+        <div className='userbooking-container-wrapper'>
+            <div className='userbooking-container'>
+                <h1 className='userbooking-header'>Your Bookings</h1>
+                {data.length > 0 ? (
+                    data.map((booking, index) => (
+                        <div key={index} className='booking-item'>
+                            <p className='booking-detail'><span className='booking-label'>Name:</span> <span className='booking-value'>{booking.name}</span></p>
+                            <p className='booking-detail'><span className='booking-label'>Age:</span> <span className='booking-value'>{booking.age}</span></p>
+                            <p className='booking-detail'><span className='booking-label'>City:</span> <span className='booking-value'>{booking.city}</span></p>
+                            <p className='booking-detail'><span className='booking-label'>Persons:</span> <span className='booking-value'>{booking.persons}</span></p>
+                            <p className='booking-detail'><span className='booking-label'>No. of Adults:</span> <span className='booking-value'>{booking.adults}</span></p>
+                            <p className='booking-detail'><span className='booking-label'>Start Date:</span> <span className='booking-value'>{new Date(booking.startdate).toLocaleDateString()}</span></p>
+                            <p className='booking-detail'><span className='booking-label'>End Date:</span> <span className='booking-value'>{new Date(booking.enddate).toLocaleDateString()}</span></p>
+                            <p className='booking-detail'><span className='booking-label'>Total Amount:</span> <span className='booking-value'>{booking.totalamount}</span></p>
+                        </div>
+                    ))
+                ) : (
+                    <p className='no-bookings'>No bookings found.</p>
+                )}
+            </div>
         </div>
     );
 }

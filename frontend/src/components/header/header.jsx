@@ -83,7 +83,7 @@ function Header() {
       <div className={styles.bottomBar}>
         <div className={styles.bottomBarContent}>
           <a href="#" className={styles.logo}>
-          <Link to="/home"> <img className={styles.logoImg} src={Logo} alt="logo" /></Link>
+            <Link to="/home"><img className={styles.logoImg} src={Logo} alt="logo" /></Link>
           </a>
           <nav className={styles.nav}>
             <ul className={styles.navList}>

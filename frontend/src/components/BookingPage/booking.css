@@ -1,4 +1,4 @@
-/* Container */
+
 .booking-container {
     width: 100%;
     overflow: hidden;
@@ -27,12 +27,11 @@
     width: 100%;
     max-width: 500px;
     padding: 40px;
-    background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.5); 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Form Control */
 .form-control-booking,
 .select-control-booking, .form-control-booking {
     width: 100%;
@@ -56,7 +55,6 @@
     background-color: aqua;
 }
 
-/* Button styling */
 .btn-booking {
     width: 100%;
     padding: 10px;
@@ -74,11 +72,9 @@
     background-color: #e6b800;
 }
 
-/* Phone input container */
 .phone-input-container {
     width: 100%;
     margin-bottom: 10px;
-    /* background-color: inherit; */
     color:black;
     
 }
@@ -89,12 +85,10 @@
 
 
 .phone-input-container .form-control-booking {
-    width: calc(100% - 56px); /* Adjust for the width of the country code selector */
+    width: calc(100% - 56px); 
     display: inline-block;
 
 }
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .content-container-booking {
         padding: 20px;

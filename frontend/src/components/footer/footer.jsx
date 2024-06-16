@@ -5,14 +5,12 @@ import { faPhone, faComment, faEnvelope } from '@fortawesome/free-solid-svg-icon
 import { faFacebook, faInstagram, faTwitter as faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
-    // Contact information stored in an array
     const contactInfo = [
         { icon: faPhone, text: '1-800-922-0444' },
         { icon: faEnvelope, text: 'waawtech@gmail.com' },
         { icon: faComment, text: 'Feedback' }
     ];
 
-    // Social media icons stored in an array
     const socialIcons = [
         { icon: faFacebook, color: '#3b5998' },
         { icon: faInstagram, color: '#C13584' },

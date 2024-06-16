@@ -47,7 +47,6 @@
     align-items: center;
     column-gap: 20px;
     font-size: 12px;
-    /* color: rgba(255, 255, 255, 0.35); */
   }
   
   .icon {
@@ -109,8 +108,7 @@
   
   .navLink:hover,
   .navLink:focus {
-    color: rgba(255, 255, 255, 1);
-  }
+ }
   
   .btn {
     color:lime;
@@ -128,12 +126,32 @@
   .btn:hover {
     background-color: rgb(28, 128, 228);
   }
-  /* Existing styles */
 
-.navItem {
-  position: relative;
-}
-
+  .navItem.active {
+    position: relative;
+  }
+  
+  .navItem.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; 
+    right: 0; 
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    animation: borderExpand 0.3s ease-in-out;
+  }
+  
+  @keyframes borderExpand {
+    from {
+      width: 0;
+      right: 0;
+    }
+    to {
+      width: 100%;
+      right: 0;
+    }
+  }
 
 .dropdownMenu {
   position: absolute;
@@ -158,7 +176,8 @@
   display: none;
   }
   .active {
-    color: aqua !important;  
+    border-bottom: red;
+    border: 2px;
   }
   
   .bar {
@@ -192,19 +211,25 @@
       top: 90px;
       left: -100%;
       transform: translateX(-50%);
-      background-color: rgb(19, 22, 26);
+      background-color: rgb(90, 29, 232);
       width: 100%;
       padding: 10px 0 25px;
+      color: #e8f0f7 !important;
     }
+
+
   
     .navList {
       flex-direction: column;
       align-items: center;
       row-gap: 20px;
+      color: #fff !important;
     }
   
     .navLink {
       font-size: 14px;
+      color: #fff !important;
+
     }
   
     .btn {
@@ -223,6 +248,9 @@
     }
     .topBarContent{
       font-size: 6px !important;
+    }
+    .navList{
+      color: white;
     }
   }
   @media (min-width :400px ) and (max-width:500px) {

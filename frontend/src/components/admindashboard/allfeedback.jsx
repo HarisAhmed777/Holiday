@@ -8,7 +8,6 @@ function Allfeedback() {
         fetch(`${baseUrl}/allfeedback`)
             .then(res => res.json())
             .then(view => {
-                console.log(view);
                 setData(view);
             })
             .catch(error => {

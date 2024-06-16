@@ -1,7 +1,5 @@
 import React from "react";
 import './package.css';
-import Header from '../header/header';
-import offone from '../../images/offermain.jpg';
 import { Link } from 'react-router-dom';
 import honey from '../../images/honey.jpg';
 import adventure from '../../images/adventure.jpg';

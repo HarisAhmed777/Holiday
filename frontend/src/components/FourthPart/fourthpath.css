@@ -25,7 +25,7 @@ body {
 
 .image {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: auto; 
     transition: transform 0.5s;
     border-radius: 20px;
 }
@@ -89,7 +89,6 @@ body {
     }
 }
 
-/* Media Queries for tablets and mobile devices */
 @media (max-width: 768px) {
     .image-container {
         display: flex;

@@ -150,7 +150,6 @@ app.get('/user', async (req, res) => {
 });
 
 
-// Profile Update Endpoint
 
 app.put('/user/update', async (req, res) => {
     const { email, firstname, lastname, mobilenumber } = req.body;
@@ -167,7 +166,8 @@ app.put('/user/update', async (req, res) => {
     try {
         const updatedUser = await UserModel.findOneAndUpdate(
             { email: sanitizedEmail },
-            { firstname: sanitizedFirstname, lastname: sanitizedLastname, mobilenumber: sanitizedMobilenumber }
+            { firstname: sanitizedFirstname, lastname: sanitizedLastname, mobilenumber: sanitizedMobilenumber },
+            { new: true } // Return the updated document
         );
         if (!updatedUser) {
             return res.status(404).json({ error: "User not found" });
